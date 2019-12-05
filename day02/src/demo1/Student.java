@@ -11,6 +11,16 @@ public class Student {
     private String sex;
     private Date birthday;
 
+    public Student() {
+    }
+
+    public Student(Integer id, String name, String sex, Date birthday) {
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.birthday = birthday;
+    }
+
     public Integer getId() {
         return id;
     }
