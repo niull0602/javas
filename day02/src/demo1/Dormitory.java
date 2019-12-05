@@ -17,7 +17,7 @@ public class Dormitory {
      * 实际人数
      */
     private Integer actualNum;
-    private String dorManager;
+    private  Student dorManager;
     private List<Student> list;
     public Integer getId() {
         return id;
@@ -43,11 +43,11 @@ public class Dormitory {
         this.type = type;
     }
 
-    public String getDorManager() {
+    public Student getDorManager() {
         return dorManager;
     }
 
-    public void setDorManager(String dorManager) {
+    public void setDorManager(Student dorManager) {
         this.dorManager = dorManager;
     }
 

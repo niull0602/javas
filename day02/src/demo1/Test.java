@@ -24,7 +24,7 @@ public class Test {
         dormitory.setId(1);
         dormitory.setType("六人间");
         dormitory.setAddress("13#1519");
-        dormitory.setDorManager("袁大头");
+        dormitory.setDorManager(student1);
         dormitory.setList(list);
         System.out.println(dormitory);
     }
