@@ -18,11 +18,11 @@ public class MapTest {
         henan.put(new Person("lh",23),"zhengzhou");
         henan.put(new Person("cc",25),"kaifeng");
         henan.put(new Person("ll",28),"luoyang");
-        Map<Map<Person,String>, String> map = new HashMap<>();
-        map.put(henan,"henan");
-        map.put(shannxi,"shannxi");
-        for (Map<Person,String> hs:map.keySet()){
-            String provice = map.get(hs);
+        Map<Map<Person,String>, String> provices = new HashMap<>();
+        provices.put(henan,"henan");
+        provices.put(shannxi,"shannxi");
+        for (Map<Person,String> hs:provices.keySet()){
+            String provice = provices.get(hs);
             for (Person p:hs.keySet()){
                 String city = hs.get(p);
                 System.out.println(provice+"\t"+city+"\t"+p.getName()+"\t"+p.getAge());
