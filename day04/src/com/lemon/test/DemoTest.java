@@ -21,7 +21,7 @@ public class DemoTest {
         Student student2 = new Student(3, "小女孩", "女", instance.getTime());
         WriteWeekResport writeWeekResport = new WriteWeekResport();
         int i=0;
-        while (true) {
+        while (i<10) {
             if (i % 2 == 0) {
                 writeWeekResport.setId(i);
                 writeWeekResport.setFilePath("C:\\Users\\Administrator\\Desktop\\test\\" + new Date().getTime()+".txt");
@@ -29,7 +29,7 @@ public class DemoTest {
                 writeWeekResport.setPresidentId(president.getId());
                 writeWeekResport.setContent(student1.getName()+"今天我完成了任务" + new Date());
                 writeWeekResport.writeWeekResport();
-                Thread.sleep(10);
+                Thread.sleep(100);
             }else {
                 writeWeekResport.setId(i);
                 writeWeekResport.setFilePath("C:\\Users\\Administrator\\Desktop\\test\\" + new Date().getTime()+".txt");
@@ -37,7 +37,7 @@ public class DemoTest {
                 writeWeekResport.setPresidentId(president.getId());
                 writeWeekResport.setContent(student2.getName()+"今天我完成了任务" + new Date());
                 writeWeekResport.writeWeekResport();
-                Thread.sleep(10);
+                Thread.sleep(100);
             }
             i++;
         }
