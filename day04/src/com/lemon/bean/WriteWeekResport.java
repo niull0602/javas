@@ -58,6 +58,15 @@ public class WriteWeekResport {
         writer.write(content);
         writer.close();
     }
+
+    public void readWeekResport(Student student,int i) throws IOException {
+        File file=new File("C:\\Users\\Administrator\\Desktop\\test\\" + student.getName()+i+".txt");
+        Reader reader = new InputStreamReader(new FileInputStream(file));
+        char[] chars = new char[1024];
+        int len = reader.read(chars);
+        System.out.println(new String(chars,0,len));
+        reader.close();
+    }
     @Override
     public String toString() {
         return "WriteWeekResport{" +

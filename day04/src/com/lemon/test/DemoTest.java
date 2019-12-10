@@ -21,25 +21,30 @@ public class DemoTest {
         Student student2 = new Student(3, "小女孩", "女", instance.getTime());
         WriteWeekResport writeWeekResport = new WriteWeekResport();
         int i=0;
-        while (i<10) {
-            if (i % 2 == 0) {
+        while (i<4) {
                 writeWeekResport.setId(i);
-                writeWeekResport.setFilePath("C:\\Users\\Administrator\\Desktop\\test\\" + new Date().getTime()+".txt");
+                writeWeekResport.setFilePath("C:\\Users\\Administrator\\Desktop\\test\\" + student1.getName()+i+".txt");
                 writeWeekResport.setMemberId(student1.getId());
                 writeWeekResport.setPresidentId(president.getId());
-                writeWeekResport.setContent(student1.getName()+"今天我完成了任务" + new Date());
+                writeWeekResport.setContent(student1.getName()+",今天我完成了任务" + new Date());
                 writeWeekResport.writeWeekResport();
                 Thread.sleep(100);
-            }else {
                 writeWeekResport.setId(i);
-                writeWeekResport.setFilePath("C:\\Users\\Administrator\\Desktop\\test\\" + new Date().getTime()+".txt");
+                writeWeekResport.setFilePath("C:\\Users\\Administrator\\Desktop\\test\\" + student2.getName()+i+".txt");
                 writeWeekResport.setMemberId(student1.getId());
                 writeWeekResport.setPresidentId(president.getId());
-                writeWeekResport.setContent(student2.getName()+"今天我完成了任务" + new Date());
+                writeWeekResport.setContent(student2.getName()+",今天我完成了任务" + new Date());
                 writeWeekResport.writeWeekResport();
                 Thread.sleep(100);
-            }
             i++;
         }
+        Thread.sleep(100);
+        for (int j = 0; j < 4; j++) {
+            writeWeekResport.readWeekResport(student1,j);
+            Thread.sleep(100);
+            writeWeekResport.readWeekResport(student2,j);
+            Thread.sleep(100);
+        }
+
     }
 }

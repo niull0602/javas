@@ -6,6 +6,7 @@ package com.lemon.bean;
 public class StudentUnion {
     private Integer id;
     private String name;
+    //类型
     private String type;
     private Integer universityId;
 
